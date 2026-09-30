@@ -1,0 +1,11 @@
+{
+  "name": "qiaomu-dsh-dev",
+  "version": "0.1.0",
+  "owner": "向阳乔木",
+  "updated_at": "2026-09-30",
+  "status": "active",
+  "maturity_tier": "governed",
+  "context_budget_tier": "production",
+  "license": "MIT",
+  "release_gates": ["package", "trigger", "sources", "clean_install", "pr_release"]
+}

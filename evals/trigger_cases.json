@@ -1,0 +1,36 @@
+{
+  "recommended_threshold": 0.67,
+  "description_required_concepts": ["domain", "plugin", "action"],
+  "positive_concepts": {
+    "domain": ["DeepSeek Harness", "DSH", "Cordis", "乔木 RSS", "乔木 Home"],
+    "plugin": ["plugin", "插件", "bundle", "profile", "面板", "slot"],
+    "action": ["开发", "修复", "调试", "测试", "安装", "发布", "审查", "检查", "更新", "build", "debug", "review", "release"]
+  },
+  "negative_patterns": ["仅解释", "不开发插件", "Obsidian 插件", "创建 skill", "教人开发", "普通网页"],
+  "should_trigger": [
+    "开发一个 DeepSeek Harness RSS 插件",
+    "修复 DSH 插件的 remote.rss 注入错误",
+    "审查 Cordis bundle 的 Host 和 Client 分界",
+    "DSH 插件构建后侧栏入口没出现，帮我调试",
+    "测试乔木 Home DSH 插件的壁纸按钮",
+    "安装 DSH 阅读插件到测试 profile 并验证",
+    "发布一个可安装的 DeepSeek Harness 插件",
+    "DSH RSS 伴读选文串到了另一篇文章，修复插件",
+    "修复 DSH 电台插件 client bundle 的 require 错误",
+    "检查 DSH 插件更新后界面还是旧版本"
+  ],
+  "should_not_trigger": [
+    "开发 Obsidian RSS 插件",
+    "创建一个教人开发 DSH 插件的 skill",
+    "仅解释 DSH 是什么，不开发插件",
+    "帮我写一个普通 React 网页",
+    "用 Cordis Run 临时生成一次性卡片"
+  ],
+  "near_neighbor": [
+    "比较 DSH 和 Obsidian 哪个适合做阅读器",
+    "请推荐可用的 DSH 插件",
+    "分析 DSH 文档但不要改代码",
+    "调试普通 Electron 应用的 React 页面",
+    "把 DSH 插件 README 翻译成英文"
+  ]
+}

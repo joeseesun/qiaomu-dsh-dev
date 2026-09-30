@@ -1,0 +1,291 @@
+{
+  "ok": true,
+  "threshold": 0.67,
+  "description_concepts": [
+    "action",
+    "domain",
+    "plugin"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 20,
+    "passed": 20,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "开发一个 DeepSeek Harness RSS 插件",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "修复 DSH 插件的 remote.rss 注入错误",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "审查 Cordis bundle 的 Host 和 Client 分界",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "DSH 插件构建后侧栏入口没出现，帮我调试",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "测试乔木 Home DSH 插件的壁纸按钮",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "安装 DSH 阅读插件到测试 profile 并验证",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "发布一个可安装的 DeepSeek Harness 插件",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "DSH RSS 伴读选文串到了另一篇文章，修复插件",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "修复 DSH 电台插件 client bundle 的 require 错误",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "检查 DSH 插件更新后界面还是旧版本",
+        "family": "default",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "开发 Obsidian RSS 插件",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "action",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "创建一个教人开发 DSH 插件的 skill",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": "教人开发"
+      },
+      {
+        "prompt": "仅解释 DSH 是什么，不开发插件",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": "仅解释"
+      },
+      {
+        "prompt": "帮我写一个普通 React 网页",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "用 Cordis Run 临时生成一次性卡片",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "domain"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "比较 DSH 和 Obsidian 哪个适合做阅读器",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "domain"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "请推荐可用的 DSH 插件",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "分析 DSH 文档但不要改代码",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "domain"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "调试普通 Electron 应用的 React 页面",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "action"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "把 DSH 插件 README 翻译成英文",
+        "family": "default",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "domain",
+          "plugin"
+        ],
+        "negative_pattern": null
+      }
+    ]
+  }
+}

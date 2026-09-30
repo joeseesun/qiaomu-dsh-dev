@@ -1,0 +1,104 @@
+{
+  "schema_version": "2.0.0-qiaomu-lite",
+  "generated_at": "2026-09-30",
+  "package": {
+    "name": "qiaomu-dsh-dev",
+    "version": "0.1.0",
+    "owner": "向阳乔木",
+    "maturity_tier": "governed",
+    "lifecycle_stage": null,
+    "upstream_inspiration": null,
+    "upstream_sync": {}
+  },
+  "intent": {
+    "description": "Develop, debug, review, test, install and release persistent DeepSeek Harness (DSH) Cordis plugins and bundles. Use for host services/tools, client slots/panels, Remote bridges, native conversations, plugin data, package/profile integration, build failures, UI regressions and live-host verification. Check the installed Harness version and current API before applying examples. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, dynamic Cordis-run packages and skill authoring.\n",
+    "job_to_be_done": "Develop, debug, review, test, install and release persistent DeepSeek Harness (DSH) Cordis plugins and bundles. Use for host services/tools, client slots/panels, Remote bridges, native conversations, plugin data, package/profile integration, build failures, UI regressions and live-host verification. Check the installed Harness version and current API before applying examples. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, dynamic Cordis-run packages and skill authoring.\n",
+    "target_users": [
+      "Qiaomu operator"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "qiaomu_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "开发一个 DeepSeek Harness RSS 插件",
+      "修复 DSH 插件的 remote.rss 注入错误",
+      "审查 Cordis bundle 的 Host 和 Client 分界",
+      "DSH 插件构建后侧栏入口没出现，帮我调试",
+      "测试乔木 Home DSH 插件的壁纸按钮",
+      "安装 DSH 阅读插件到测试 profile 并验证",
+      "发布一个可安装的 DeepSeek Harness 插件",
+      "DSH RSS 伴读选文串到了另一篇文章，修复插件",
+      "修复 DSH 电台插件 client bundle 的 require 错误",
+      "检查 DSH 插件更新后界面还是旧版本"
+    ],
+    "should_not_trigger": [
+      "开发 Obsidian RSS 插件",
+      "创建一个教人开发 DSH 插件的 skill",
+      "仅解释 DSH 是什么，不开发插件",
+      "帮我写一个普通 React 网页",
+      "用 Cordis Run 临时生成一次性卡片"
+    ],
+    "near_neighbor": [
+      "比较 DSH 和 Obsidian 哪个适合做阅读器",
+      "请推荐可用的 DSH 插件",
+      "分析 DSH 文档但不要改代码",
+      "调试普通 Electron 应用的 React 页面",
+      "把 DSH 插件 README 翻译成英文"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [
+      "references/architecture.md",
+      "references/cases.md",
+      "references/data-and-ui.md",
+      "references/verification.md"
+    ],
+    "scripts": [],
+    "evals": [
+      "evals/output-cases.md",
+      "evals/trigger_cases.json"
+    ],
+    "reports": [
+      "reports/creation-handoff.md",
+      "reports/prior-art-candidates.json",
+      "reports/prior-art-research.md",
+      "reports/skill-ir.json",
+      "reports/trigger-eval.json"
+    ]
+  },
+  "portability": {
+    "canonical_format": null,
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible"
+    ],
+    "activation": {},
+    "execution": {},
+    "trust": {
+      "remote_inline_execution": "forbid"
+    },
+    "permissions": {
+      "file_write": "requested plugin repository or isolated test profile",
+      "network": "official documentation, required plugin services and authorized publication"
+    },
+    "degradation": {}
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}
