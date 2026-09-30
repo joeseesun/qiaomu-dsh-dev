@@ -1,0 +1,11 @@
+interface:
+  display_name: "乔木 DSH 插件开发"
+  short_description: "开发与验收 DeepSeek Harness 持久化插件"
+  default_prompt: "Use $qiaomu-dsh-dev to inspect the current DSH version and installed package, implement or debug the requested persistent plugin at its Host/Client boundary, then verify source, build, profile and live user behavior separately. Preserve user data and existing profile state. Publish only when authorized."
+compatibility:
+  adapter_targets: [openai, claude, generic, agent-skills-compatible]
+  trust:
+    remote_inline_execution: forbid
+  permissions:
+    file_write: "requested plugin repository or isolated test profile"
+    network: "official documentation, required plugin services and authorized publication"
