@@ -1,9 +1,9 @@
 {
   "schema_version": "2.0.0-qiaomu-lite",
-  "generated_at": "2026-09-30",
+  "generated_at": "2026-10-01",
   "package": {
     "name": "qiaomu-dsh-dev",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "owner": "向阳乔木",
     "maturity_tier": "governed",
     "lifecycle_stage": null,
@@ -11,8 +11,8 @@
     "upstream_sync": {}
   },
   "intent": {
-    "description": "Develop, debug, review, test, install and release persistent DeepSeek Harness (DSH) Cordis plugins and bundles. Use for host services/tools, client slots/panels, Remote bridges, native conversations, plugin data, package/profile integration, build failures, UI regressions and live-host verification. Check the installed Harness version and current API before applying examples. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, dynamic Cordis-run packages and skill authoring.\n",
-    "job_to_be_done": "Develop, debug, review, test, install and release persistent DeepSeek Harness (DSH) Cordis plugins and bundles. Use for host services/tools, client slots/panels, Remote bridges, native conversations, plugin data, package/profile integration, build failures, UI regressions and live-host verification. Check the installed Harness version and current API before applying examples. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, dynamic Cordis-run packages and skill authoring.\n",
+    "description": "Develop, scaffold, debug, review, test, install and publish persistent DeepSeek Harness (DSH) Cordis plugins and bundles end to end. Use for Host services/tools, Client slots/panels, Remote bridges, native conversations, plugin data, profile integration, build failures, UI regressions, live-host verification, GitHub releases, illustrated bilingual plugin README, packaged artifacts and marketplace submissions. Includes standalone doctor, scaffold, artifact audit and public-download verification; no other skill installation required. Check the installed Harness version and current API. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, ephemeral Cordis Run packages and skill authoring.\n",
+    "job_to_be_done": "Develop, scaffold, debug, review, test, install and publish persistent DeepSeek Harness (DSH) Cordis plugins and bundles end to end. Use for Host services/tools, Client slots/panels, Remote bridges, native conversations, plugin data, profile integration, build failures, UI regressions, live-host verification, GitHub releases, illustrated bilingual plugin README, packaged artifacts and marketplace submissions. Includes standalone doctor, scaffold, artifact audit and public-download verification; no other skill installation required. Check the installed Harness version and current API. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, ephemeral Cordis Run packages and skill authoring.\n",
     "target_users": [
       "Qiaomu operator"
     ],
@@ -32,7 +32,14 @@
       "发布一个可安装的 DeepSeek Harness 插件",
       "DSH RSS 伴读选文串到了另一篇文章，修复插件",
       "修复 DSH 电台插件 client bundle 的 require 错误",
-      "检查 DSH 插件更新后界面还是旧版本"
+      "检查 DSH 插件更新后界面还是旧版本",
+      "为 DSH 插件发布补齐 GitHub topics 和市场提交资料",
+      "检查 DeepSeek Harness 插件打包后能否在全新 profile 安装",
+      "为 DeepSeek Harness 插件从零创建可安装 bundle 并发布 GitHub",
+      "修复 DSH 插件停用再启用后的重复监听器",
+      "为 DSH 插件发布写图文双语 README 并核验安装包",
+      "检查 DSH 插件的选段翻译是否错误处理全文",
+      "审查 DSH profile 升级后的数据迁移与回滚"
     ],
     "should_not_trigger": [
       "开发 Obsidian RSS 插件",
@@ -60,19 +67,30 @@
       "references/architecture.md",
       "references/cases.md",
       "references/data-and-ui.md",
+      "references/design-philosophy.md",
+      "references/distribution-and-marketplaces.md",
+      "references/illustrated-readme.md",
+      "references/implementation-recipes.md",
+      "references/release-runbook.md",
       "references/verification.md"
     ],
-    "scripts": [],
+    "scripts": [
+      "scripts/dsh_dev.py"
+    ],
     "evals": [
       "evals/output-cases.md",
-      "evals/trigger_cases.json"
+      "evals/trigger_cases.json",
+      "evals/workflow-cases.md"
     ],
     "reports": [
       "reports/creation-handoff.md",
+      "reports/prior-art-candidates-20261001.json",
       "reports/prior-art-candidates.json",
       "reports/prior-art-research.md",
+      "reports/research-20261001.md",
       "reports/skill-ir.json",
-      "reports/trigger-eval.json"
+      "reports/trigger-eval.json",
+      "reports/validation-20261001.md"
     ]
   },
   "portability": {

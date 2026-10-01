@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-label="让 UI 与 Agent，调用同一项能力">
+<rect width="1200" height="390" rx="24" fill="#f5f4ef"/>
+<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+<text x="60" y="64" fill="#59736b" font-size="15" letter-spacing="3">QIAOMU / DSH DEV</text>
+<text x="60" y="115" fill="#172f2b" font-size="34" font-weight="500">让 UI 与 Agent，调用同一项能力</text>
+<text x="60" y="150" fill="#69746e" font-size="17">先定义服务边界，沿用宿主的会话、调度与生命周期。</text>
+<rect x="60.0" y="195" width="256.5" height="122" rx="12" fill="#fff"/>
+<text x="78.0" y="226" fill="#76847b" font-size="12">01</text>
+<text x="78.0" y="258" fill="#253d35" font-size="20">Client · Slot</text>
+<text x="78.0" y="287" fill="#69746e" font-size="13">交互、主题、引用</text>
+<rect x="334.5" y="195" width="256.5" height="122" rx="12" fill="#fff"/>
+<text x="352.5" y="226" fill="#76847b" font-size="12">02</text>
+<text x="352.5" y="258" fill="#253d35" font-size="20">Host · Service</text>
+<text x="352.5" y="287" fill="#69746e" font-size="13">业务、网络、持久化</text>
+<rect x="609.0" y="195" width="256.5" height="122" rx="12" fill="#fff"/>
+<text x="627.0" y="226" fill="#76847b" font-size="12">03</text>
+<text x="627.0" y="258" fill="#253d35" font-size="20">Agent · Tool</text>
+<text x="627.0" y="287" fill="#69746e" font-size="13">一致参数与副作用</text>
+<rect x="883.5" y="195" width="256.5" height="122" rx="12" fill="#dbe7dd"/>
+<text x="901.5" y="226" fill="#76847b" font-size="12">04</text>
+<text x="901.5" y="258" fill="#253d35" font-size="20">Context · Effect</text>
+<text x="901.5" y="287" fill="#69746e" font-size="13">资源清理与恢复</text>
+<text x="60" y="355" fill="#69746e" font-size="13">可组合能力 · 明确资源归属 · 从公开安装包验证用户结果</text>
+</g></svg>

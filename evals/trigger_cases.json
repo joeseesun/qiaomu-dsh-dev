@@ -1,12 +1,50 @@
 {
   "recommended_threshold": 0.67,
-  "description_required_concepts": ["domain", "plugin", "action"],
+  "description_required_concepts": [
+    "domain",
+    "plugin",
+    "action"
+  ],
   "positive_concepts": {
-    "domain": ["DeepSeek Harness", "DSH", "Cordis", "乔木 RSS", "乔木 Home"],
-    "plugin": ["plugin", "插件", "bundle", "profile", "面板", "slot"],
-    "action": ["开发", "修复", "调试", "测试", "安装", "发布", "审查", "检查", "更新", "build", "debug", "review", "release"]
+    "domain": [
+      "DeepSeek Harness",
+      "DSH",
+      "Cordis",
+      "乔木 RSS",
+      "乔木 Home"
+    ],
+    "plugin": [
+      "plugin",
+      "插件",
+      "bundle",
+      "profile",
+      "面板",
+      "slot"
+    ],
+    "action": [
+      "开发",
+      "修复",
+      "调试",
+      "测试",
+      "安装",
+      "发布",
+      "审查",
+      "检查",
+      "更新",
+      "build",
+      "debug",
+      "review",
+      "release"
+    ]
   },
-  "negative_patterns": ["仅解释", "不开发插件", "Obsidian 插件", "创建 skill", "教人开发", "普通网页"],
+  "negative_patterns": [
+    "仅解释",
+    "不开发插件",
+    "Obsidian 插件",
+    "创建 skill",
+    "教人开发",
+    "普通网页"
+  ],
   "should_trigger": [
     "开发一个 DeepSeek Harness RSS 插件",
     "修复 DSH 插件的 remote.rss 注入错误",
@@ -17,7 +55,14 @@
     "发布一个可安装的 DeepSeek Harness 插件",
     "DSH RSS 伴读选文串到了另一篇文章，修复插件",
     "修复 DSH 电台插件 client bundle 的 require 错误",
-    "检查 DSH 插件更新后界面还是旧版本"
+    "检查 DSH 插件更新后界面还是旧版本",
+    "为 DSH 插件发布补齐 GitHub topics 和市场提交资料",
+    "检查 DeepSeek Harness 插件打包后能否在全新 profile 安装",
+    "为 DeepSeek Harness 插件从零创建可安装 bundle 并发布 GitHub",
+    "修复 DSH 插件停用再启用后的重复监听器",
+    "为 DSH 插件发布写图文双语 README 并核验安装包",
+    "检查 DSH 插件的选段翻译是否错误处理全文",
+    "审查 DSH profile 升级后的数据迁移与回滚"
   ],
   "should_not_trigger": [
     "开发 Obsidian RSS 插件",

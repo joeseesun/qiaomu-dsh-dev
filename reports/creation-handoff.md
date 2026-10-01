@@ -1,15 +1,15 @@
-# 创建交付（2026-09-30）
+# qiaomu-dsh-dev 0.2.0 交付
 
-**结果**：`qiaomu-dsh-dev` v0.1.0，指导持久化 DSH 插件从当前 API 取证到真实运行与公开安装。唯一源目录为个人 `.agents/skills/qiaomu-dsh-dev`。
+更新于 2026-10-01。唯一源为个人 canonical skills 目录；参考、脚本、模板、工程图均随包安装。
 
-**参考学习**：官方 `cordis-plugin-development` 的当前宿主检查；NanmiCoder `dsh-plugin-development` 的 Host/Client 与 profile 分层；乔木 Obsidian 开发 Skill 的按需参考和宿主验收；`codebase-design` 的明确接口选择。来源、固定版本和取舍见 `reports/prior-art-research.md`。
+实际研究的参考skills：官方 persistent cordis-plugin-development，dsh-client-ui-ux，dsh-code-review，dsh-pre-push-checks，dsh-find-simplifications；Pilot的dynamic cordis-plugin-development与editing-cordis-compositions。候选具体取舍见 research-20261001.md。社区SSH/Remote/Vision是工程机制锚点，不宣称质量排名。
 
-**取舍**：保留版本取证与真实用户路径；把案例收窄为可验证故障，不将 RSS/Reader 的当前服务名推广为 DSH 常量；舍弃动态 Cordis Run 的安装与审批流程。原创的五层证据矩阵连接 RSS 的 Remote 问题、Home 的安装副本与点击问题、Radio 的客户端外壳、Reader 的文件可靠性。
+**设计优势**：按Context与Service边界选实现，少依赖内部Client包；UI/Tool共用Host operation；一包覆盖开发、README、验收和发布。
 
-**优势与证据**：
+**已验证优势**：标准库脚本有消费端失败回归；init脚手架经npm pack、独立DSH 0.2.0-rc.2 profile安装、dump-config和Host apply激活，验收日志有明确marker。它是最小Host脚手架验证，未证明复杂业务或Client交互。
 
-- [design advantage] 根文件保持路由与最短流程，四个按需参考分别覆盖架构、数据/UI、验证、案例；对应文件可直接检查。
-- [validated advantage] 触发案例与包验证结果以生成的 `reports/trigger-eval.json`、`reports/skill-ir.json` 和本地检查日志为准。
-- [hypothesis] 五层证据矩阵可能减少“源码完成=用户可用”的误判；尚缺新项目端到端或对照评测。
+**假设**：会缩短复杂插件开发与发布时间。未做同题Agent对照/跨平台完整运行或满意度调查。
 
-**边界**：Skill 不替代官方当前 API、安装过程或实际 GUI 验收；不包含本机凭据、profile 数据或私有源码。发布后的全新安装和真实 DSH 开发案例须分别核实。
+拒绝：照抄动态代码环境禁import到编译插件、把旧API目录写死、重复手动改用户profile、把安装量当质量、把HTML样机当实机截图、强行用内部DOM桥接原生composer。
+
+包级验证与公开发布结果在 validation-20261001.md 和自动发布报告；缺证仍单独保留。研究原始聊天与profile凭据未打包。

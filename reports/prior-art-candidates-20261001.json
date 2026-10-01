@@ -1,0 +1,1235 @@
+{
+  "ok": true,
+  "complete": true,
+  "researched_at": "2026-10-01",
+  "queries": [
+    "DeepSeek Harness plugin development",
+    "Cordis plugin lifecycle release"
+  ],
+  "metric_semantics": {
+    "skills_sh_installs": "ecosystem install telemetry; not ratings or correctness",
+    "skillsmp_repo_stars": "GitHub repository stars; not installs, ratings, or skill-specific quality",
+    "cross_catalog_score": "not calculated; metrics remain separate"
+  },
+  "query_runs": [
+    {
+      "query": "DeepSeek Harness plugin development",
+      "skills_sh": "ok",
+      "skillsmp": "ok",
+      "skills_sh_candidates": 18,
+      "skillsmp_candidates": 10
+    },
+    {
+      "query": "Cordis plugin lifecycle release",
+      "skills_sh": "ok",
+      "skillsmp": "ok",
+      "skills_sh_candidates": 18,
+      "skillsmp_candidates": 10
+    }
+  ],
+  "candidate_family_count": 52,
+  "candidates": [
+    {
+      "family_key": "mattpocock/skills:tdd",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "mattpocock/skills",
+        "skill_name": "tdd",
+        "family_key": "mattpocock/skills:tdd",
+        "skills_sh_installs": 992600,
+        "skills_sh_installs_display": "992.6K",
+        "skills_sh_url": "https://skills.sh/mattpocock/skills/tdd"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "mattpocock/skills:codebase-design",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "mattpocock/skills",
+        "skill_name": "codebase-design",
+        "family_key": "mattpocock/skills:codebase-design",
+        "skills_sh_installs": 703400,
+        "skills_sh_installs_display": "703.4K",
+        "skills_sh_url": "https://skills.sh/mattpocock/skills/codebase-design"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lllllllama/rigorpilot-skills:repo-intake-and-plan",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "lllllllama/rigorpilot-skills",
+        "skill_name": "repo-intake-and-plan",
+        "family_key": "lllllllama/rigorpilot-skills:repo-intake-and-plan",
+        "skills_sh_installs": 450200,
+        "skills_sh_installs_display": "450.2K",
+        "skills_sh_url": "https://skills.sh/lllllllama/rigorpilot-skills/repo-intake-and-plan"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lllllllama/rigorpilot-skills:minimal-run-and-audit",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "lllllllama/rigorpilot-skills",
+        "skill_name": "minimal-run-and-audit",
+        "family_key": "lllllllama/rigorpilot-skills:minimal-run-and-audit",
+        "skills_sh_installs": 450100,
+        "skills_sh_installs_display": "450.1K",
+        "skills_sh_url": "https://skills.sh/lllllllama/rigorpilot-skills/minimal-run-and-audit"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "mattpocock/skills:setup-pre-commit",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "mattpocock/skills",
+        "skill_name": "setup-pre-commit",
+        "family_key": "mattpocock/skills:setup-pre-commit",
+        "skills_sh_installs": 406100,
+        "skills_sh_installs_display": "406.1K",
+        "skills_sh_url": "https://skills.sh/mattpocock/skills/setup-pre-commit"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lllllllama/rigorpilot-skills:ai-research-explore",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "lllllllama/rigorpilot-skills",
+        "skill_name": "ai-research-explore",
+        "family_key": "lllllllama/rigorpilot-skills:ai-research-explore",
+        "skills_sh_installs": 311400,
+        "skills_sh_installs_display": "311.4K",
+        "skills_sh_url": "https://skills.sh/lllllllama/rigorpilot-skills/ai-research-explore"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lllllllama/rigorpilot-skills:ai-research-reproduction",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "lllllllama/rigorpilot-skills",
+        "skill_name": "ai-research-reproduction",
+        "family_key": "lllllllama/rigorpilot-skills:ai-research-reproduction",
+        "skills_sh_installs": 311000,
+        "skills_sh_installs_display": "311K",
+        "skills_sh_url": "https://skills.sh/lllllllama/rigorpilot-skills/ai-research-reproduction"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "lllllllama/rigorpilot-skills:explore-code",
+      "queries": [
+        "Cordis plugin lifecycle release",
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "lllllllama/rigorpilot-skills",
+        "skill_name": "explore-code",
+        "family_key": "lllllllama/rigorpilot-skills:explore-code",
+        "skills_sh_installs": 310700,
+        "skills_sh_installs_display": "310.7K",
+        "skills_sh_url": "https://skills.sh/lllllllama/rigorpilot-skills/explore-code"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "firebase/agent-skills:xcode-project-setup",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "firebase/agent-skills",
+        "skill_name": "xcode-project-setup",
+        "family_key": "firebase/agent-skills:xcode-project-setup",
+        "skills_sh_installs": 117600,
+        "skills_sh_installs_display": "117.6K",
+        "skills_sh_url": "https://skills.sh/firebase/agent-skills/xcode-project-setup"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "juliusbrussee/caveman:lean-build",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "juliusbrussee/caveman",
+        "skill_name": "lean-build",
+        "family_key": "juliusbrussee/caveman:lean-build",
+        "skills_sh_installs": 76300,
+        "skills_sh_installs_display": "76.3K",
+        "skills_sh_url": "https://skills.sh/juliusbrussee/caveman/lean-build"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "expo/skills:expo-dev-client",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "expo/skills",
+        "skill_name": "expo-dev-client",
+        "family_key": "expo/skills:expo-dev-client",
+        "skills_sh_installs": 63500,
+        "skills_sh_installs_display": "63.5K",
+        "skills_sh_url": "https://skills.sh/expo/skills/expo-dev-client"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "addyosmani/agent-skills:incremental-implementation",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "addyosmani/agent-skills",
+        "skill_name": "incremental-implementation",
+        "family_key": "addyosmani/agent-skills:incremental-implementation",
+        "skills_sh_installs": 44100,
+        "skills_sh_installs_display": "44.1K",
+        "skills_sh_url": "https://skills.sh/addyosmani/agent-skills/incremental-implementation"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "addyosmani/agent-skills:test-driven-development",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "addyosmani/agent-skills",
+        "skill_name": "test-driven-development",
+        "family_key": "addyosmani/agent-skills:test-driven-development",
+        "skills_sh_installs": 43700,
+        "skills_sh_installs_display": "43.7K",
+        "skills_sh_url": "https://skills.sh/addyosmani/agent-skills/test-driven-development"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "expo/skills:expo-deployment",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "expo/skills",
+        "skill_name": "expo-deployment",
+        "family_key": "expo/skills:expo-deployment",
+        "skills_sh_installs": 41100,
+        "skills_sh_installs_display": "41.1K",
+        "skills_sh_url": "https://skills.sh/expo/skills/expo-deployment"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "addyosmani/agent-skills:shipping-and-launch",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "addyosmani/agent-skills",
+        "skill_name": "shipping-and-launch",
+        "family_key": "addyosmani/agent-skills:shipping-and-launch",
+        "skills_sh_installs": 40400,
+        "skills_sh_installs_display": "40.4K",
+        "skills_sh_url": "https://skills.sh/addyosmani/agent-skills/shipping-and-launch"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "samber/cc-skills-golang:golang-continuous-integration",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "samber/cc-skills-golang",
+        "skill_name": "golang-continuous-integration",
+        "family_key": "samber/cc-skills-golang:golang-continuous-integration",
+        "skills_sh_installs": 39100,
+        "skills_sh_installs_display": "39.1K",
+        "skills_sh_url": "https://skills.sh/samber/cc-skills-golang/golang-continuous-integration"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "expo/skills:eas-update-insights",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "expo/skills",
+        "skill_name": "eas-update-insights",
+        "family_key": "expo/skills:eas-update-insights",
+        "skills_sh_installs": 32299,
+        "skills_sh_installs_display": "32.3K",
+        "skills_sh_url": "https://skills.sh/expo/skills/eas-update-insights"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "get-convex/agent-skills:convex-advisor",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "get-convex/agent-skills",
+        "skill_name": "convex-advisor",
+        "family_key": "get-convex/agent-skills:convex-advisor",
+        "skills_sh_installs": 26900,
+        "skills_sh_installs_display": "26.9K",
+        "skills_sh_url": "https://skills.sh/get-convex/agent-skills/convex-advisor"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "jimliu/baoyu-skills:release-skills",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "jimliu/baoyu-skills",
+        "skill_name": "release-skills",
+        "family_key": "jimliu/baoyu-skills:release-skills",
+        "skills_sh_installs": 25200,
+        "skills_sh_installs_display": "25.2K",
+        "skills_sh_url": "https://skills.sh/jimliu/baoyu-skills/release-skills"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "expo/skills:eas-app-stores",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "expo/skills",
+        "skill_name": "eas-app-stores",
+        "family_key": "expo/skills:eas-app-stores",
+        "skills_sh_installs": 17300,
+        "skills_sh_installs_display": "17.3K",
+        "skills_sh_url": "https://skills.sh/expo/skills/eas-app-stores"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "upstash/skills:upstash-redis-js",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "upstash/skills",
+        "skill_name": "upstash-redis-js",
+        "family_key": "upstash/skills:upstash-redis-js",
+        "skills_sh_installs": 14900,
+        "skills_sh_installs_display": "14.9K",
+        "skills_sh_url": "https://skills.sh/upstash/skills/upstash-redis-js"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "github/awesome-copilot:create-implementation-plan",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "github/awesome-copilot",
+        "skill_name": "create-implementation-plan",
+        "family_key": "github/awesome-copilot:create-implementation-plan",
+        "skills_sh_installs": 12600,
+        "skills_sh_installs_display": "12.6K",
+        "skills_sh_url": "https://skills.sh/github/awesome-copilot/create-implementation-plan"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "anthropics/claude-plugins-official:claude-md-improver",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "anthropics/claude-plugins-official",
+        "skill_name": "claude-md-improver",
+        "family_key": "anthropics/claude-plugins-official:claude-md-improver",
+        "skills_sh_installs": 11400,
+        "skills_sh_installs_display": "11.4K",
+        "skills_sh_url": "https://skills.sh/anthropics/claude-plugins-official/claude-md-improver"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "github/awesome-copilot:make-repo-contribution",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "github/awesome-copilot",
+        "skill_name": "make-repo-contribution",
+        "family_key": "github/awesome-copilot:make-repo-contribution",
+        "skills_sh_installs": 11200,
+        "skills_sh_installs_display": "11.2K",
+        "skills_sh_url": "https://skills.sh/github/awesome-copilot/make-repo-contribution"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "github/awesome-copilot:update-implementation-plan",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "Cordis plugin lifecycle release",
+        "owner_repo": "github/awesome-copilot",
+        "skill_name": "update-implementation-plan",
+        "family_key": "github/awesome-copilot:update-implementation-plan",
+        "skills_sh_installs": 11200,
+        "skills_sh_installs_display": "11.2K",
+        "skills_sh_url": "https://skills.sh/github/awesome-copilot/update-implementation-plan"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "nanmicoder/dsh-agent-teams:dsh-plugin-development",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "nanmicoder/dsh-agent-teams",
+        "skill_name": "dsh-plugin-development",
+        "family_key": "nanmicoder/dsh-agent-teams:dsh-plugin-development",
+        "skills_sh_installs": 164,
+        "skills_sh_installs_display": "164",
+        "skills_sh_url": "https://skills.sh/nanmicoder/dsh-agent-teams/dsh-plugin-development"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "win4r/deepseek-harness-plugin-creator:deepseek-harness-plugin-creator",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "win4r/deepseek-harness-plugin-creator",
+        "skill_name": "deepseek-harness-plugin-creator",
+        "family_key": "win4r/deepseek-harness-plugin-creator:deepseek-harness-plugin-creator",
+        "skills_sh_installs": 8,
+        "skills_sh_installs_display": "8",
+        "skills_sh_url": "https://skills.sh/win4r/deepseek-harness-plugin-creator/deepseek-harness-plugin-creator"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "cat-xierluo/legal-skills:dsh-plugin-lint",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "cat-xierluo/legal-skills",
+        "skill_name": "dsh-plugin-lint",
+        "family_key": "cat-xierluo/legal-skills:dsh-plugin-lint",
+        "skills_sh_installs": 5,
+        "skills_sh_installs_display": "5",
+        "skills_sh_url": "https://skills.sh/cat-xierluo/legal-skills/dsh-plugin-lint"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "royenheart/maintainall:dsh-plugin-development",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "royenheart/maintainall",
+        "skill_name": "dsh-plugin-development",
+        "family_key": "royenheart/maintainall:dsh-plugin-development",
+        "skills_sh_installs": 5,
+        "skills_sh_installs_display": "5",
+        "skills_sh_url": "https://skills.sh/royenheart/maintainall/dsh-plugin-development"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "harcochen/dsh-plugin-guide:deepseek-harness-plugin",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "harcochen/dsh-plugin-guide",
+        "skill_name": "deepseek-harness-plugin",
+        "family_key": "harcochen/dsh-plugin-guide:deepseek-harness-plugin",
+        "skills_sh_installs": 4,
+        "skills_sh_installs_display": "4",
+        "skills_sh_url": "https://skills.sh/harcochen/dsh-plugin-guide/deepseek-harness-plugin"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:cordis-plugin-development",
+      "queries": [
+        "Cordis plugin lifecycle release",
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "deepseek-ai/deepseek-harness",
+        "skill_name": "cordis-plugin-development",
+        "family_key": "deepseek-ai/deepseek-harness:cordis-plugin-development",
+        "skills_sh_installs": 3,
+        "skills_sh_installs_display": "3",
+        "skills_sh_url": "https://skills.sh/deepseek-ai/deepseek-harness/cordis-plugin-development"
+      },
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "cordis-plugin-development",
+        "author": "deepseek-ai",
+        "description": "Use when adding, enabling, disabling, installing, configuring, or debugging a plugin, bundle, feature, page, panel, tool, or MCP connection in the current Harness profile, including a shipped plugin that is disabled by default, and for any visual object, decoration, or widget request that names no other destination, which means an installed UI plugin rendered in the Harness Web UI.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/preset/agent-preset/skills/cordis-plugin-development",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/packages-preset-agent-preset-skills-cordis-plugin-development",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-24T09:20:17+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:packages/preset/agent-preset/skills/cordis-plugin-development",
+        "family_key": "deepseek-ai/deepseek-harness:cordis-plugin-development",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skills.sh",
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "perrylink/dsh-plugin-guide:dsh-plugin-guide",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "perrylink/dsh-plugin-guide",
+        "skill_name": "dsh-plugin-guide",
+        "family_key": "perrylink/dsh-plugin-guide:dsh-plugin-guide",
+        "skills_sh_installs": 3,
+        "skills_sh_installs_display": "3",
+        "skills_sh_url": "https://skills.sh/perrylink/dsh-plugin-guide/dsh-plugin-guide"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "liyown/skill:dshx-plugin-development",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "liyown/skill",
+        "skill_name": "dshx-plugin-development",
+        "family_key": "liyown/skill:dshx-plugin-development",
+        "skills_sh_installs": 2,
+        "skills_sh_installs_display": "2",
+        "skills_sh_url": "https://skills.sh/liyown/skill/dshx-plugin-development"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "smiletao/dsh-plugin-dev-skill:dsh-plugin-dev",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "smiletao/dsh-plugin-dev-skill",
+        "skill_name": "dsh-plugin-dev",
+        "family_key": "smiletao/dsh-plugin-dev-skill:dsh-plugin-dev",
+        "skills_sh_installs": 2,
+        "skills_sh_installs_display": "2",
+        "skills_sh_url": "https://skills.sh/smiletao/dsh-plugin-dev-skill/dsh-plugin-dev"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "unforgetmemory/um-dsh-plugin-skills:umdshdev",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": {
+        "source": "skills.sh",
+        "query": "DeepSeek Harness plugin development",
+        "owner_repo": "unforgetmemory/um-dsh-plugin-skills",
+        "skill_name": "umdshdev",
+        "family_key": "unforgetmemory/um-dsh-plugin-skills:umdshdev",
+        "skills_sh_installs": 2,
+        "skills_sh_installs_display": "2",
+        "skills_sh_url": "https://skills.sh/unforgetmemory/um-dsh-plugin-skills/umdshdev"
+      },
+      "skillsmp": null,
+      "catalogs": [
+        "skills.sh"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:cordis-composition-reference",
+      "queries": [
+        "Cordis plugin lifecycle release",
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "cordis-composition-reference",
+        "author": "deepseek-ai",
+        "description": "Use when writing or reading a Cordis bundle patch or agent preset for this harness and you need the Loader YAML dialect (insert, override by id, group, disabled, isolate, !!js) or the list of installable Harness plugin packages and what each provides.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/preset/agent-preset/skills/cordis-composition-reference",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/packages-preset-agent-preset-skills-cordis-composition-reference",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-25T12:05:36+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:packages/preset/agent-preset/skills/cordis-composition-reference",
+        "family_key": "deepseek-ai/deepseek-harness:cordis-composition-reference",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-archive-agent-notes",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-archive-agent-notes",
+        "author": "deepseek-ai",
+        "description": "Use when adding, auditing, pruning, archiving, restoring, or reviewing Agent Notes in deepseek-harness; checks every new note for superseded active records, deletes small UI and purely mechanical records, classifies other implemented notes by future decision value, deletes rejected notes that no longer prevent a tempting fallacy, and applies the frozen archived/{kind} triplet and manifest rules.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-archive-agent-notes",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-archive-agent-notes",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-18T04:50:47+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-archive-agent-notes",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-archive-agent-notes",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-ci-test-reliability",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-ci-test-reliability",
+        "author": "deepseek-ai",
+        "description": "Design, review, and diagnose DeepSeek Harness tests and fixtures that can fail nondeterministically under CI concurrency, shared host resources, clocks, process-global state, subprocesses, network listeners, or asynchronous teardown. Use when adding or changing tests with those risks, investigating flaky CI, or reviewing test isolation; use dsh-pre-push-checks separately to select outgoing commands.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-ci-test-reliability",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-ci-test-reliability",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-08-29T05:54:59+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-ci-test-reliability",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-ci-test-reliability",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-client-ui-ux",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-client-ui-ux",
+        "author": "deepseek-ai",
+        "description": "Design and review DeepSeek Harness client UI changes — visual token discipline, reuse-before-adding, feedback surfaces (toast vs in-place notice vs empty state), overlay and menu safety, platform window adaptation, loading states, and error copy placement. Use when adding or changing product-user-visible GUI behavior in packages/client, or when reviewing such a PR.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-client-ui-ux",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-client-ui-ux",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-22T13:03:30+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-client-ui-ux",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-client-ui-ux",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-code-review",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-code-review",
+        "author": "deepseek-ai",
+        "description": "Use when reviewing a pull request in the deepseek-harness repo — orients the reviewer to this codebase's standards (AGENTS.md conventions, defensive patterns, ADRs, quality gates) and the review-specific checks that code alone can't show",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-code-review",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-code-review",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-22T10:52:15+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-code-review",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-code-review",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-doc",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-doc",
+        "author": "deepseek-ai",
+        "description": "Create, restructure, review, audit, or migrate DeepSeek Harness Markdown documentation, package READMEs, and the documentation website using audience-first hierarchy, kind-mapped YAML metadata, bilingual line alignment, summary/contents navigation, progressive user-to-developer detail, executed-operation fact-checking, and repository validation. Use for new or revised DSH docs, docs-tree organization, documentation-quality audits and budgets, website page publishing, and bilingual documentation structure changes.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-doc",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-doc",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-23T14:32:06+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-doc",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-doc",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-find-simplifications",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-find-simplifications",
+        "author": "deepseek-ai",
+        "description": "Find evidence-backed simplifications in DeepSeek Harness code, APIs, configuration, tests, and prose; write or consolidate proposals, identify small inline cleanups, or assess simplifications from another branch. Use for removing dead, duplicated, speculative, or unnecessarily maintained behavior and infrastructure.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-find-simplifications",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-find-simplifications",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-19T13:58:03+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-find-simplifications",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-find-simplifications",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-speed-up-perf",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-speed-up-perf",
+        "author": "deepseek-ai",
+        "description": "Use when investigating or optimizing DeepSeek Harness performance, designing realistic synthetic benchmarks or CI performance gates, profiling long Sessions or Web responsiveness, or turning performance PR evidence into measured behavior-preserving fixes.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-speed-up-perf",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-speed-up-perf",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-06T06:50:53+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-speed-up-perf",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-speed-up-perf",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:dsh-translate-docs",
+      "queries": [
+        "DeepSeek Harness plugin development"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "dsh-translate-docs",
+        "author": "deepseek-ai",
+        "description": "Manually run the extended DeepSeek Harness bilingual-document workflow, including generated briefings, delegated prose translation, whole-document translation, and scoped pairing verification.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/.agents/skills/dsh-translate-docs",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/agents-skills-dsh-translate-docs",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-23T14:32:06+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:.agents/skills/dsh-translate-docs",
+        "family_key": "deepseek-ai/deepseek-harness:dsh-translate-docs",
+        "aliases": [],
+        "query": "DeepSeek Harness plugin development"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "deepseek-ai/deepseek-harness:editing-cordis-compositions",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "editing-cordis-compositions",
+        "author": "deepseek-ai",
+        "description": "Use when creating, changing, or validating an agent preset or other Cordis composition for this harness, including deciding host versus preset placement and checking that an authored preset mounts.",
+        "content_language": "en",
+        "github_url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/preset/agent-preset/skills/editing-cordis-compositions",
+        "skillsmp_url": "https://skillsmp.com/creators/deepseek-ai/deepseek-harness/packages-preset-agent-preset-skills-editing-cordis-compositions",
+        "repo_stars": 237626,
+        "catalog_updated_at": "2026-09-21T13:28:35+00:00",
+        "source_key": "deepseek-ai/deepseek-harness:packages/preset/agent-preset/skills/editing-cordis-compositions",
+        "family_key": "deepseek-ai/deepseek-harness:editing-cordis-compositions",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "fufankeji/deepseek-harness-studio:cordis-plugin-development",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "cordis-plugin-development",
+        "author": "fufankeji",
+        "description": "Create, modify, debug, or extend dynamic Cordis Plugins, including Host Services and Events, Client Slot and theme UI, Package-private Client-to-Host calls, dynamic Tools, version updates, approval failures, and runtime diagnostics. Use this Skill to route a user request to the correct platform and Inspect Provider, then define, run, repair, or roll back the Plugin.",
+        "content_language": "en",
+        "github_url": "https://github.com/fufankeji/deepseek-harness-studio/tree/main/apps/cli/config/agent-presets/cordis/skills/cordis-plugin-development",
+        "skillsmp_url": "https://skillsmp.com/creators/fufankeji/deepseek-harness-studio/apps-cli-config-agent-presets-cordis-skills-cordis-plugin-development",
+        "repo_stars": 650,
+        "catalog_updated_at": "2026-08-15T02:40:16+00:00",
+        "source_key": "fufankeji/deepseek-harness-studio:apps/cli/config/agent-presets/cordis/skills/cordis-plugin-development",
+        "family_key": "fufankeji/deepseek-harness-studio:cordis-plugin-development",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "fufankeji/deepseek-harness-studio:editing-cordis-compositions",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "editing-cordis-compositions",
+        "author": "fufankeji",
+        "description": "Use when creating, changing, or validating a Cordis composition for this harness — writing or editing an agent preset, adding or removing a plugin row, deciding whether something belongs to the host composition or to one session, checking whether a preset you authored actually mounts, or diagnosing a row that mounted but contributed nothing.",
+        "content_language": "en",
+        "github_url": "https://github.com/fufankeji/deepseek-harness-studio/tree/main/apps/cli/config/agent-presets/cordis/skills/editing-cordis-compositions",
+        "skillsmp_url": "https://skillsmp.com/creators/fufankeji/deepseek-harness-studio/apps-cli-config-agent-presets-cordis-skills-editing-cordis-compositions",
+        "repo_stars": 650,
+        "catalog_updated_at": "2026-08-18T10:59:40+00:00",
+        "source_key": "fufankeji/deepseek-harness-studio:apps/cli/config/agent-presets/cordis/skills/editing-cordis-compositions",
+        "family_key": "fufankeji/deepseek-harness-studio:editing-cordis-compositions",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "flizzywine/dsh-tavern:advanced-capabilities",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "advanced-capabilities",
+        "author": "flizzywine",
+        "description": "在 Tavern 卡片工作台中创建或修改 Skill、通用工具、Cordis 插件及其他需要原生文件能力的高级扩展；普通人物卡、世界书、预设、剧本和游玩记录编辑不使用。",
+        "content_language": "zh",
+        "github_url": "https://github.com/flizzywine/dsh-tavern/tree/main/presets/tavern/skills/advanced-capabilities",
+        "skillsmp_url": "https://skillsmp.com/creators/flizzywine/dsh-tavern/presets-tavern-skills-advanced-capabilities",
+        "repo_stars": 479,
+        "catalog_updated_at": "2026-09-14T09:37:34+00:00",
+        "source_key": "flizzywine/dsh-tavern:presets/tavern/skills/advanced-capabilities",
+        "family_key": "flizzywine/dsh-tavern:advanced-capabilities",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "infometa/workbuddyskills:cordys-crm",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "cordys-crm",
+        "author": "infometa",
+        "description": "Cordys CRM L2C 全链路技能。支持跨模块关联追踪、漏斗分析、Customer 360、智能工作流引导，以及完整的 CLI 指令映射。\n触发词：线索、客户、商机、合同、回款、发票、审批、漏斗、管道、CRM",
+        "content_language": "zh",
+        "github_url": "https://github.com/infometa/workbuddyskills/tree/main/experts/cordys-crm/skills/cordys-crm",
+        "skillsmp_url": "https://skillsmp.com/creators/infometa/workbuddyskills/experts-cordys-crm-skills-cordys-crm",
+        "repo_stars": 326,
+        "catalog_updated_at": "2026-07-21T03:35:05+00:00",
+        "source_key": "infometa/workbuddyskills:experts/cordys-crm/skills/cordys-crm",
+        "family_key": "infometa/workbuddyskills:cordys-crm",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "op7418/pilot-harness:cordis-plugin-development",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "cordis-plugin-development",
+        "author": "op7418",
+        "description": "Create, modify, debug, or extend dynamic Cordis Plugins, including Host Services and Events, Client Slot and theme UI, Package-private Client-to-Host calls, dynamic Tools, version updates, approval failures, and runtime diagnostics. Use this Skill to route a user request to the correct platform and Inspect Provider, then define, run, repair, or roll back the Plugin.",
+        "content_language": "en",
+        "github_url": "https://github.com/op7418/pilot-harness/tree/main/apps/cli/config/agent-presets/cordis/skills/cordis-plugin-development",
+        "skillsmp_url": "https://skillsmp.com/creators/op7418/pilot-harness/apps-cli-config-agent-presets-cordis-skills-cordis-plugin-development",
+        "repo_stars": 278,
+        "catalog_updated_at": "2026-08-17T17:39:50+00:00",
+        "source_key": "op7418/pilot-harness:apps/cli/config/agent-presets/cordis/skills/cordis-plugin-development",
+        "family_key": "op7418/pilot-harness:cordis-plugin-development",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "op7418/pilot-harness:editing-cordis-compositions",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "editing-cordis-compositions",
+        "author": "op7418",
+        "description": "Use when creating, changing, or validating a Cordis composition for this harness — writing or editing an agent preset, adding or removing a plugin row, deciding whether something belongs to the host composition or to one session, checking whether a preset you authored actually mounts, or diagnosing a row that mounted but contributed nothing.",
+        "content_language": "en",
+        "github_url": "https://github.com/op7418/pilot-harness/tree/main/apps/cli/config/agent-presets/cordis/skills/editing-cordis-compositions",
+        "skillsmp_url": "https://skillsmp.com/creators/op7418/pilot-harness/apps-cli-config-agent-presets-cordis-skills-editing-cordis-compositions",
+        "repo_stars": 278,
+        "catalog_updated_at": "2026-08-13T08:50:05+00:00",
+        "source_key": "op7418/pilot-harness:apps/cli/config/agent-presets/cordis/skills/editing-cordis-compositions",
+        "family_key": "op7418/pilot-harness:editing-cordis-compositions",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    },
+    {
+      "family_key": "hobobo/abilitykit:determinism",
+      "queries": [
+        "Cordis plugin lifecycle release"
+      ],
+      "skills_sh": null,
+      "skillsmp": {
+        "source": "skillsmp",
+        "name": "determinism",
+        "author": "HOBOBO",
+        "description": "AbilityKit 定点数与确定性栈——com.abilitykit.deterministic 定点数学(Fixed64/Q32.32/FixedVec/CORDIC 三角/DeterministicHash)、DeterministicMathBridge 收敛层、raw long 快照约定、帧时钟确定≠全战斗确定的边界、定点改造配方(基类 raw 存储+float 视图)、已知漂移源(遍历序/System.Math/float 计时)。触发场景：定点化改造、确定性 bug、漂移排查、Fixed64、raw long 快照、回滚 payload、golden 测试、帧同步一致性、位一致断言、MathUtil.Sqrt、DeterministicMathBridge。",
+        "content_language": "zh",
+        "github_url": "https://github.com/HOBOBO/AbilityKit/tree/master/.claude/skills/determinism",
+        "skillsmp_url": "https://skillsmp.com/creators/hobobo/abilitykit/claude-skills-determinism",
+        "repo_stars": 254,
+        "catalog_updated_at": "2026-08-18T01:19:07+00:00",
+        "source_key": "hobobo/abilitykit:.claude/skills/determinism",
+        "family_key": "hobobo/abilitykit:determinism",
+        "aliases": [],
+        "query": "Cordis plugin lifecycle release"
+      },
+      "catalogs": [
+        "skillsmp"
+      ],
+      "requires_source_review": true
+    }
+  ],
+  "missing_evidence": [],
+  "next_steps": [
+    "shortlist by job relevance and role coverage, not combined popularity",
+    "open canonical GitHub source and inspect SKILL.md before adoption",
+    "verify license, maintenance, permissions, security, duplication, and rating evidence",
+    "write keep/adapt/reject/invent synthesis before authoring"
+  ]
+}

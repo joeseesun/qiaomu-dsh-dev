@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-label="每一层都有自己的完成证据">
+<rect width="1200" height="390" rx="24" fill="#f5f4ef"/>
+<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+<text x="60" y="64" fill="#59736b" font-size="15" letter-spacing="3">QIAOMU / DSH DEV</text>
+<text x="60" y="115" fill="#172f2b" font-size="34" font-weight="500">每一层都有自己的完成证据</text>
+<text x="60" y="150" fill="#69746e" font-size="17">构建通过之后，继续检查用户实际消费的包与运行状态。</text>
+<rect x="60.0" y="195" width="201.6" height="122" rx="12" fill="#fff"/>
+<text x="78.0" y="226" fill="#76847b" font-size="12">01</text>
+<text x="78.0" y="258" fill="#253d35" font-size="20">源码</text>
+<text x="78.0" y="287" fill="#69746e" font-size="13">TEST / BUILD</text>
+<rect x="279.6" y="195" width="201.6" height="122" rx="12" fill="#fff"/>
+<text x="297.6" y="226" fill="#76847b" font-size="12">02</text>
+<text x="297.6" y="258" fill="#253d35" font-size="20">产物</text>
+<text x="297.6" y="287" fill="#69746e" font-size="13">EXPORTS / TGZ</text>
+<rect x="499.2" y="195" width="201.6" height="122" rx="12" fill="#fff"/>
+<text x="517.2" y="226" fill="#76847b" font-size="12">03</text>
+<text x="517.2" y="258" fill="#253d35" font-size="20">宿主</text>
+<text x="517.2" y="287" fill="#69746e" font-size="13">INSTALL / UI</text>
+<rect x="718.8" y="195" width="201.6" height="122" rx="12" fill="#fff"/>
+<text x="736.8" y="226" fill="#76847b" font-size="12">04</text>
+<text x="736.8" y="258" fill="#253d35" font-size="20">公开</text>
+<text x="736.8" y="287" fill="#69746e" font-size="13">DOWNLOAD / HASH</text>
+<rect x="938.4" y="195" width="201.6" height="122" rx="12" fill="#dbe7dd"/>
+<text x="956.4" y="226" fill="#76847b" font-size="12">05</text>
+<text x="956.4" y="258" fill="#253d35" font-size="20">消费</text>
+<text x="956.4" y="287" fill="#69746e" font-size="13">CLEAN PROFILE</text>
+<text x="60" y="355" fill="#69746e" font-size="13">可组合能力 · 明确资源归属 · 从公开安装包验证用户结果</text>
+</g></svg>
