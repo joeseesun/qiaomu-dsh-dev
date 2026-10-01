@@ -23,4 +23,6 @@
 
 ## 发布边界
 
-只有用户明确授权发布才推送、创建 PR、合并或发布 Release。验证候选 commit 的 CI 与对应构建，公开安装走全新 profile；报告 `source merged`、`release available`、`clean install`、`live host` 分别是否成立。README 的安装命令要用同样方式实测。失败/未测明确写缺证据和复现步骤。
+用户当前或此前的明确发布授权适用于推送、PR、合并和 Release；只读审查不发布。验证候选 commit 的 CI 与对应构建，公开安装走全新 profile；报告 `source merged`、`release available`、`clean install`、`live host` 分别是否成立。README 的安装命令要用同样方式实测。失败/未测明确写缺证据和复现步骤。
+
+市场、Topics 和安装包准备另见 [分发与市场提交](distribution-and-marketplaces.md)。

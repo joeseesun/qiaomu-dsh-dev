@@ -1,55 +1,121 @@
-# qiaomu-dsh-dev · 乔木 DSH 插件开发 Skill
+# qiaomu-dsh-dev
 
-**中文** · [English](#english)
+**把 DeepSeek Harness 插件，从一个想法做到真实可用、公开可安装。**
 
-为 DeepSeek Harness 的**持久化 Cordis 插件**提供从代码到真实界面的开发流程。它帮助你决定 Host/Client 边界、检查当前宿主 API、处理依赖注入和数据生命周期，并分别验证构建、profile 安装及实际用户动作。
+中文优先 · [English](#english) · [开发入口](SKILL.md) · [设计理念](references/design-philosophy.md) · [研究依据](reports/research-20261001.md)
 
-本 Skill 来自近期乔木 RSS、Home、Radio、Reader 的代码复盘，并与 [DSH 官方插件文档](https://deepseek-harness.github.io/deepseek-harness/en/develop/basic/) 对照。案例不是可直接复制的当前 API；使用时仍需核对目标 DSH 版本。
+![从想法到可安装 DSH 插件的工程流程](assets/development-flow.svg)
 
-## 安装
+> 上图是工作流示意，不是插件运行截图。版本 **0.2.0** · 单包自包含 · Python 3.9+ · MIT
+
+## 只安装这个 Skill
 
 ```bash
 npx skills add joeseesun/qiaomu-dsh-dev
 ```
 
-也可直接阅读 [SKILL.md](SKILL.md) 并将此目录作为 Agent Skills 包使用。此包本身不安装或修改 DSH。需要开发插件时，请提供目标仓库、DSH 版本、目标 profile、故障现象和期望用户动作。
+无需另外安装设计、发布或开发 Skill。包内包含开发配方、故障定位、脚手架、tgz 审计、公开下载校验、验收模板和图文 README 模板。它适用于支持 Agent Skills 的编码代理。
 
-### 使用前准备
+开发仍需目标 DSH、Node/包管理器；发布需要 GitHub 权限，npm 仅在选择该渠道时需要。Skill 安装不会安装 DSH、修改日用 profile 或替你配置凭据。脚本只在任务需要时显式运行。
 
-- [ ] 可读取目标插件仓库及其 `package.json`、构建脚本和测试。
-- [ ] 知道目标 DSH 版本与 profile；需要验证安装时准备独立测试 profile。
-- [ ] 若要真实界面验收，需能访问 DSH 客户端；公开发布另需 GitHub 权限。
+使用前准备：
 
-### 你可以直接这样说
+- [ ] 可以读取和构建目标插件仓库；自带脚本可用 Python 3.9+。
+- [ ] 已安装目标 DSH，有明确的独立测试 profile 与真实宿主验收入口。
+- [ ] 发布时具备 GitHub 权限，并明确选择的分发渠道。
 
-> 用 `qiaomu-dsh-dev` 检查我的 RSS 插件：Host 工具出现了，但 `remote.rss` 报未注入。先核对当前已安装版本，再修复并在测试 profile 里验证阅读面板。
+## 你可以直接这样说
 
-> 用 `qiaomu-dsh-dev` 审查 Home 插件更新后壁纸按钮仍不可点的问题；比较源码、构建产物和 profile 安装副本，并在真实页面测试。
+> 用 qiaomu-dsh-dev 做一个 DSH 待办插件：界面与 Agent 工具共用 Host 操作，保留本地数据，安装到独立 profile 验收。完成后通过 PR 发布到 GitHub，README 要有真实操作截图和可安装 tgz。
 
-## 适用任务
+> RSS 工具可用，但阅读面板报 remote.rss 未注入。检查实际 DSH 版本、Client 依赖、构建包和安装副本，修复后在宿主中验证两篇文章的选段问答。
 
-- 开发/修复 DSH Host 工具、Client 面板、Remote 桥接或原生 AI 伴读。
-- 排查 bundle 能构建却无法启动、面板未出现、安装副本未更新、用户数据写错位置。
-- 审查测试与发布链路：源码、产物、profile、真实界面、公开安装逐层核对。
+> 审查这个 DSH 插件的发布包和图文 README。只读检查 exports、patch、离线资产、真实截图来源、安装命令与兼容证据。
 
-不用于 Obsidian 专属插件、普通网页、一次性 Cordis Run 代码或编写 Skill 本身。
+## 你会得到什么
 
-## 交付方式
+| 环节 | 交付 |
+| --- | --- |
+| 理解 DSH | 插件组合、Service Definition/Provider/Consumer、Context 生命周期、session log 与稳定扩展点 |
+| 开发 | Host/Client/Remote 边界、共享业务操作、原生会话、i18n、数据迁移与失败恢复 |
+| 修复 | 对照源码、实际构建、profile 安装与进程加载，定位失效层 |
+| 验收 | 真实成功/失败路径、停用/启用、草稿、主题、窄屏、媒体与文件产物 |
+| 发布 | feature branch → PR → CI → merge → Release/tgz → 公开下载 → 干净安装 |
+| 展示 | 双语产品 README、真实操作截图与来源、安装/隐私/卸载说明、市场资料 |
 
-Skill 会输出根因/改动、测试命令、已验证层、缺证层和最短复测动作。参考资料按需读：[架构](references/architecture.md)、[数据与界面](references/data-and-ui.md)、[验证与发布](references/verification.md)、[案例](references/cases.md)。
+## 理解“一切皆插件”
 
-检查本 Skill 包：
+![Host、Client、会话与数据的职责关系](assets/architecture.svg)
+
+DSH 的扩展能力来自可组合的服务、事件与可撤销 effect。这个 Skill 先确定能力由谁提供、谁调用、谁清理，再选实现：业务操作放 Host，UI 与工具调用同一逻辑；会话事实以日志为准，缓存只作派生；UI 通过真实 Slot 与主题 token 加入宿主。
+
+[理念与扩展点](references/design-philosophy.md) · [实现配方](references/implementation-recipes.md) · [架构核验](references/architecture.md)
+
+## 自带四个小工具
+
+从本 Skill 目录执行，替换示例路径：
 
 ```bash
-python3 /path/to/qiaomu-meta-skill/scripts/validate_skill.py .
-python3 /path/to/qiaomu-meta-skill/scripts/trigger_eval.py . --cases evals/trigger_cases.json
+# 只读诊断：包、exports、Git 状态、CLI 候选
+python3 scripts/dsh_dev.py doctor --repo /path/to/plugin
+
+# 创建最小 Host bundle，不覆盖已有目录
+python3 scripts/dsh_dev.py init /path/to/new-plugin --name qiaomu-demo-dsh
+
+# 检查真正给用户的 tgz，不执行包代码
+python3 scripts/dsh_dev.py audit /path/to/package.tgz
+
+# 匿名公开下载 + 候选 SHA256 + tgz 审计
+python3 scripts/dsh_dev.py verify-download --url PUBLIC_HTTPS_TGZ_URL --sha256 EXPECTED_SHA256
 ```
 
-### Troubleshooting · 故障排查
+脚手架包含 manifest、Host 入口、bundle patch、en/zh 展示元数据、icon 和文档模板；Host 的 apply 是空起点，业务功能仍须实现。工具不会推断运行成功，也不会替代 Loader YAML 与真实宿主验收。
 
-若 Skill 未被识别，确认安装目录下有根级 `SKILL.md`，其 YAML frontmatter 的 `name` 为 `qiaomu-dsh-dev`，然后重新载入 Agent 的 Skill 列表。若插件问题仍在，先按 [分层故障定位](references/verification.md) 比对安装副本与运行 profile，附上版本、日志及重现动作。
+## Troubleshooting · 用近期开发经验解决常见卡点
 
-**隐私与权限：** Skill 是文字流程，不包含用户凭据或本机 profile。实际开发只修改授权的仓库与明确的测试环境；GitHub 发布须由用户明确提出。
+- **构建通过但面板没出现**：核对 factory、Slot、运行 inject、包元数据与实际安装副本。
+- **切文章串上下文或抖动**：材料/选段/会话分离，保留 composer，验证迟到响应与草稿。
+- **改样式影响播放器或点击**：实际 hit-test、webview 布局与播放 owner 单独验证。
+- **本地好用但他人装不了**：tgz 的 exports、声明、patch、媒体资源与公开下载另验。
+- **只有源码公开或目录标签**：清楚报告 Release、独立安装、市场提交、录用与可见阶段。
+
+参考最近 **15 个相关开发聊天**，覆盖 Home、RSS、Reader、Radio；聊天状态截至 2026-10-01，正在进行的开发不算已验收。[复盘案例](references/cases.md)
+
+## 图文 README 与发布
+
+[README 模板](templates/PLUGIN_README.md) 从用户任务出发：价值、真实主界面、安装、三步使用、兼容、隐私、卸载与恢复。每张图注明实际版本/构建来源；没有实机时可用明确标注的概念图，不伪造运行成果。
+
+![分层证据与公开交付](assets/evidence.svg)
+
+[发布操作手册](references/release-runbook.md) · [图文标准](references/illustrated-readme.md) · [验收模板](templates/ACCEPTANCE.md) · [市场投稿](references/distribution-and-marketplaces.md)
+
+当前请求或已明确授权的长期发布偏好都有效，不重复索取授权。没有发布授权时完成本地准备；只读审查保持只读。GitHub Topics 与社区目录提供发现，不表示 DeepSeek 官方维护或背书。
+
+## 来源与适用边界
+
+以 [DSH 官方架构](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/architecture.md)和[官方持久插件指南](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/preset/agent-preset/skills/cordis-plugin-development)为主要依据，学习官方 UI/review/pre-push Skills，以及 SSH、Remote、Vision 三类社区插件的互补机制。[来源与取舍](reports/research-20261001.md)
+
+DSH 正在快速迭代。每次开发先查安装版本和契约；历史内部 Client 依赖不是新插件的稳定模板。已验证包工具、Host 脚手架的安装启动与 Skill 安装；尚无复杂插件同题对比，不声称世界第一。
+
+本 Skill 不适用于 Obsidian 专属插件、普通网页或临时 Cordis Run 代码。遇到连接/宿主权限不足，保留具体缺证层与最短复测步骤。
+
+## 检查这个包
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+发布维护时已通过 `validate_skill.py` 的结构检查；日常使用不需要这个外部维护工具。
+
+测试覆盖缺声明/exports、缺bundle、危险archive路径、Client入口和无覆盖创建等消费端失败。触发用例和发布证据在 [evals](evals/) 与 [reports](reports/)。
+
+## English
+
+Build, debug, verify and publish persistent DeepSeek Harness plugins with one self-contained Agent Skill. It includes version-aware design guidance, Host/Client/Remote recipes, a no-dependency Python doctor and Host scaffold, archive audits, public-download SHA256 verification, release instructions and illustrated bilingual README templates.
+
+Install: `npx skills add joeseesun/qiaomu-dsh-dev`. You still need DSH, the plugin toolchain, a test profile and GitHub access for publication. The Skill does not install the host or modify a profile implicitly. Scaffold output is an empty Host starting point, not a completed feature.
+
+Verification distinguishes source, artifacts, profile, live user behavior and public installation. Publishing uses existing user authorization. Protect data and drafts, reuse verified contracts, preserve upstream licenses, and report untested versions and platforms explicitly.
 
 <!-- qiaomu-profile:start -->
 ## 关于向阳乔木
@@ -71,12 +137,6 @@ python3 /path/to/qiaomu-meta-skill/scripts/trigger_eval.py . --cases evals/trigg
 
 <!-- qiaomu-profile:end -->
 
-## English
-
-`qiaomu-dsh-dev` is an Agent Skill for building and debugging **persistent DeepSeek Harness Cordis plugins**. It helps inspect the installed DSH API, choose Host/Client ownership, implement Remote and Slot integration, and verify source, bundle, profile, live UI, and public distribution as separate stages.
-
-Install with `npx skills add joeseesun/qiaomu-dsh-dev`. Provide the plugin repository, target DSH version/profile, failing action, and expected user result. The Skill contains guidance and case studies; it does not install a DSH plugin or run code by itself. Obsidian-only plugins, generic web apps, ephemeral Cordis Run packages, and Skill authoring are outside its scope. Publishing requires explicit authorization.
-
 ## License
 
-MIT. Copyright (c) 向阳乔木 · [X](https://x.com/vista8) · [GitHub](https://github.com/joeseesun/)
+MIT · Copyright (c) 向阳乔木 · [X](https://x.com/vista8) · [GitHub](https://github.com/joeseesun/)
