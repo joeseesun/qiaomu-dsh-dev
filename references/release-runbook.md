@@ -31,6 +31,8 @@ DSH_HOME=/tmp/dsh-test-home /absolute/dsh --profile plugin-qa --no-open
 
 Desktop 使用其 bundled CLI 和 initialized desktop profile，不能用全局 CLI 覆盖 reserved profile。优先在另一个测试运行环境验收；日用更新按用户已授权范围执行。先备份数据与配置，核对当前 session 是否正在使用，避免两个聊天同时重启。
 
+针对宿主升级，先按 [兼容演进](host-compatibility.md) 检查公开包与候选声明；同版本重打包使用唯一候选路径。安装后执行 `dsh_dev.py compare-install <tgz> --installed <具体包目录>`，再重载进程，避免验收旧文件。
+
 安装 manager 的 application/warnings 决定 applied、overridden、failed、restart-required；安装路径/摘要/版本单独核对。重载后走用户路径，检查 locale、主题、键盘、选文、工具、媒体与卸载。模拟宿主和 HTML 样机只证明组件。
 
 ## D. GitHub 与公开渠道

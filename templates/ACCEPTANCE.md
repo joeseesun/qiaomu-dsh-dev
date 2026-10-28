@@ -4,13 +4,16 @@
 - DSH version/runtime source/platform：
 - 测试 profile 与数据来源（无凭据）：
 - 候选包 filename/SHA256：
+- 升级任务：旧公开包版本/hash、目标宿主矩阵、health/官方评估器版本：
 
 | 层 | 状态 passed / failed / pending / not applicable | 证据与限制 |
 | --- | --- | --- |
 | 源码与现有改动保护 | pending | |
 | typecheck/test/build | pending | |
 | tgz exports/patch/assets | pending | |
-| dump-config与安装副本 | pending | |
+| 声明矩阵（公开包/候选） | pending | 静态结果不能证明运行 |
+| dump-config与安装副本逐文件比对 | pending | |
+| 原生 smoke：注册/实际调用/关闭 | pending | 不适用于纯 UI 时注明 |
 | 启动与Client materialization | pending | |
 | 用户成功/失败/恢复路径 | pending | |
 | 停用/重启用/卸载 | pending | |
