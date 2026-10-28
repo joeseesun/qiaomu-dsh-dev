@@ -17,6 +17,18 @@ SKILL = Path(__file__).resolve().parents[1]
 MAX_BYTES = 100 * 1024 * 1024
 
 
+def compatibility_metadata(package):
+    """Expose declarations without pretending to evaluate host compatibility."""
+    engines = package.get('engines', {})
+    peers = package.get('peerDependencies', {})
+    has_engine = isinstance(engines, dict) and 'dsh' in engines
+    dsh_peers = {name: value for name, value in peers.items()
+                 if name == '@deepseek-ai/dsh' or name.startswith('@deepseek-ai/dsh-')} if isinstance(peers, dict) else {}
+    return {'basis_rc3': 'engines.dsh' if has_engine else 'dsh peers' if dsh_peers else 'undeclared',
+            'engines_dsh': engines.get('dsh') if has_engine else None,
+            'dsh_peers': dsh_peers, 'evaluated': False}
+
+
 def local_target(value):
     if not isinstance(value, str) or not value.startswith('./'):
         raise ValueError('Package path must start with ./')
@@ -124,8 +136,64 @@ def audit(path):
                 warnings.append('Review possible private runtime data: ' + filename)
         warnings.append('Static archive audit does not validate Loader YAML semantics, secrets in arbitrary files or live behavior')
     return {'ok': not errors, 'package': package.get('name'), 'version': package.get('version'),
+            'compatibility_declarations': compatibility_metadata(package),
             'sha256': hashlib.sha256(Path(path).read_bytes()).hexdigest(),
             'file_count': len(files), 'errors': errors, 'warnings': warnings}
+
+
+def compare_install(archive_path, installed):
+    """Compare packaged files to an explicit installed package root, without writes."""
+    result = audit(archive_path)
+    result.update({'installed_root': str(Path(installed).resolve()),
+                   'checked_files': 0, 'all_packaged_files_match': False,
+                   'runtime_verified': False})
+    if not result['ok']:
+        return result
+    root = Path(installed).resolve(strict=True)
+    if not root.is_dir():
+        raise ValueError('Installed package root must be a directory')
+    with tarfile.open(archive_path, 'r:gz') as archive:
+        for member in archive:
+            if not member.isfile():
+                continue
+            relative = str(PurePosixPath(*PurePosixPath(member.name).parts[1:]))
+            target = root / relative
+            try:
+                resolved = target.resolve(strict=True)
+                if not resolved.is_relative_to(root) or target.is_symlink():
+                    result['errors'].append('Installed path escapes root or is a symlink: ' + relative)
+                    continue
+                if not target.is_file():
+                    result['errors'].append('Installed path is not a regular file: ' + relative)
+                    continue
+                result['checked_files'] += 1
+                if target.stat().st_size != member.size:
+                    result['errors'].append('Installed content mismatch: ' + relative)
+                    continue
+                with archive.extractfile(member) as source, target.open('rb') as actual:
+                    expected_hash, actual_hash = hashlib.sha256(), hashlib.sha256()
+                    while True:
+                        chunk = source.read(1024 * 1024)
+                        if not chunk:
+                            break
+                        expected_hash.update(chunk)
+                    total = 0
+                    while True:
+                        chunk = actual.read(1024 * 1024)
+                        if not chunk:
+                            break
+                        total += len(chunk)
+                        if total > MAX_BYTES:
+                            raise ValueError('Installed file exceeds comparison limit')
+                        actual_hash.update(chunk)
+                if expected_hash.digest() != actual_hash.digest():
+                    result['errors'].append('Installed content mismatch: ' + relative)
+            except FileNotFoundError:
+                result['errors'].append('Missing installed file: ' + relative)
+    result['ok'] = not result['errors']
+    result['all_packaged_files_match'] = result['ok']
+    result['warnings'].append('Only packaged files compared; extra installed files and loaded process state are not verified')
+    return result
 
 
 def doctor(repo, dsh=None):
@@ -157,6 +225,7 @@ def doctor(repo, dsh=None):
         if r.returncode == 0:
             git_state = r.stdout.strip() or 'clean'
     return {'repo': str(root), 'package': package.get('name'), 'version': package.get('version'),
+            'compatibility_declarations': compatibility_metadata(package),
             'scripts': sorted(package.get('scripts', {})), 'dsh_manifest': package.get('dsh'),
             'missing_export_files': missing, 'git_status': git_state, 'cli_candidates': candidates,
             'next': 'Use the chosen target CLI --version/--help; inspect installed APIs and explicit test profile',
@@ -201,7 +270,7 @@ def verify_download(url, expected, output=None):
         raise ValueError('Output exists; refusing overwrite')
     with tempfile.TemporaryDirectory(prefix='dsh-public-') as tmp:
         path = Path(tmp) / 'package.tgz'
-        req = urllib.request.Request(url, headers={'User-Agent': 'qiaomu-dsh-dev/0.2.0'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'qiaomu-dsh-dev/0.3.0'})
         with urllib.request.urlopen(req, timeout=30) as response, path.open('wb') as stream:
             if urllib.parse.urlsplit(response.geturl()).scheme != 'https':
                 raise ValueError('Insecure redirect')
@@ -234,6 +303,7 @@ def main():
     p = commands.add_parser('doctor'); p.add_argument('--repo', required=True); p.add_argument('--dsh')
     p = commands.add_parser('init'); p.add_argument('destination'); p.add_argument('--name', required=True)
     p = commands.add_parser('audit'); p.add_argument('archive')
+    p = commands.add_parser('compare-install'); p.add_argument('archive'); p.add_argument('--installed', required=True)
     p = commands.add_parser('verify-download'); p.add_argument('--url', required=True); p.add_argument('--sha256', required=True); p.add_argument('--output')
     args = parser.parse_args()
     try:
@@ -243,6 +313,8 @@ def main():
             result = init_plugin(args.destination, args.name)
         elif args.command == 'audit':
             result = audit(args.archive)
+        elif args.command == 'compare-install':
+            result = compare_install(args.archive, args.installed)
         else:
             result = verify_download(args.url, args.sha256, args.output)
         print(json.dumps(result, ensure_ascii=False, indent=2))

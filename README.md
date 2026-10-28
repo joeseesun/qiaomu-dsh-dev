@@ -6,7 +6,7 @@
 
 ![从想法到可安装 DSH 插件的工程流程](assets/development-flow.svg)
 
-> 上图是工作流示意，不是插件运行截图。版本 **0.2.0** · 单包自包含 · Python 3.9+ · MIT
+> 上图是工作流示意，不是插件运行截图。版本 **0.3.0** · 单包自包含 · Python 3.9+ · MIT
 
 ## 只安装这个 Skill
 
@@ -43,6 +43,14 @@ npx skills add joeseesun/qiaomu-dsh-dev
 | 发布 | feature branch → PR → CI → merge → Release/tgz → 公开下载 → 干净安装 |
 | 展示 | 双语产品 README、真实操作截图与来源、安装/隐私/卸载说明、市场资料 |
 
+## DSH 更新后，插件也能跟上
+
+先比较用户下载的公开包和候选源码，再做版本矩阵、真实宿主启动、工具调用与页面验收。v0.3.0 集成 [dsh-plugin-health](https://github.com/EasonMWS/dsh-plugin-health) 的可选检查配方，并增加安装文件逐项比对，避免测试到同版本旧缓存。
+
+> 检查我们的 DSH 插件能否兼容新宿主：复现旧公开包问题，修复后完成矩阵与真实运行验证，再走已有发布流程。
+
+[升级兼容操作手册](references/host-compatibility.md) · [静态 CI 模板](templates/dsh-compat.yml)。CLI 固定为已验证的 health 0.5.0，需使用时才在隔离目录安装；本 Skill 不会自行开启定时任务、修改日用 profile 或无人值守发布。
+
 ## 理解“一切皆插件”
 
 ![Host、Client、会话与数据的职责关系](assets/architecture.svg)
@@ -51,7 +59,7 @@ DSH 的扩展能力来自可组合的服务、事件与可撤销 effect。这个
 
 [理念与扩展点](references/design-philosophy.md) · [实现配方](references/implementation-recipes.md) · [架构核验](references/architecture.md)
 
-## 自带四个小工具
+## 自带五个小工具
 
 从本 Skill 目录执行，替换示例路径：
 
@@ -64,6 +72,9 @@ python3 scripts/dsh_dev.py init /path/to/new-plugin --name qiaomu-demo-dsh
 
 # 检查真正给用户的 tgz，不执行包代码
 python3 scripts/dsh_dev.py audit /path/to/package.tgz
+
+# 比对真实安装文件，识别同版本旧缓存
+python3 scripts/dsh_dev.py compare-install /path/to/package.tgz --installed /path/to/profile/node_modules/plugin-name
 
 # 匿名公开下载 + 候选 SHA256 + tgz 审计
 python3 scripts/dsh_dev.py verify-download --url PUBLIC_HTTPS_TGZ_URL --sha256 EXPECTED_SHA256
@@ -111,7 +122,9 @@ python3 -m unittest discover -s tests -v
 
 ## English
 
-Build, debug, verify and publish persistent DeepSeek Harness plugins with one self-contained Agent Skill. It includes version-aware design guidance, Host/Client/Remote recipes, a no-dependency Python doctor and Host scaffold, archive audits, public-download SHA256 verification, release instructions and illustrated bilingual README templates.
+Build, debug, verify and publish persistent DeepSeek Harness plugins with one self-contained Agent Skill. It includes version-aware design guidance, Host/Client/Remote recipes, a no-dependency Python doctor and Host scaffold, archive audits, installed-file comparison, public-download SHA256 verification, release instructions and illustrated bilingual README templates.
+
+Host upgrades can use the optional pinned dsh-plugin-health CLI for static matrices and real profile/tool smoke tests. Browser behavior remains a separate acceptance layer; no recurring automation is enabled implicitly. See [host compatibility](references/host-compatibility.md).
 
 Install: `npx skills add joeseesun/qiaomu-dsh-dev`. You still need DSH, the plugin toolchain, a test profile and GitHub access for publication. The Skill does not install the host or modify a profile implicitly. Scaffold output is an empty Host starting point, not a completed feature.
 

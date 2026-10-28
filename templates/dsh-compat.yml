@@ -1,0 +1,43 @@
+# Copy into a plugin repository's .github/workflows/ directory.
+# Static declarations only: add native runtime and product UI acceptance separately.
+name: DSH compatibility declarations
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      versions:
+        description: Exact supported DSH versions, comma-separated
+        type: string
+        default: '0.2.1-rc.3'
+permissions:
+  contents: read
+jobs:
+  declarations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DSH_HOST_VERSIONS: ${{ inputs.versions || '0.2.1-rc.3' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned diagnostic CLI
+        run: npm install --prefix "$RUNNER_TEMP/dsh-health" --ignore-scripts --no-audit --no-fund dsh-plugin-health@0.5.0
+      - name: Check candidate manifest
+        run: |
+          "$RUNNER_TEMP/dsh-health/node_modules/.bin/dsh-plugin-health" matrix \
+            --plugins "$GITHUB_WORKSPACE" \
+            --versions "$DSH_HOST_VERSIONS" \
+            --out dsh-health-out/matrix --fail-on any
+      - name: Record static result
+        if: always()
+        run: |
+          if [ -f dsh-health-out/matrix/matrix.md ]; then
+            cat dsh-health-out/matrix/matrix.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dsh-declaration-matrix
+          path: dsh-health-out/matrix

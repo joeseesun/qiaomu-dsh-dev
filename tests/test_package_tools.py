@@ -97,6 +97,72 @@ class PackageToolsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(ValueError): dev.init_plugin(Path(tmp) / 'new', '../../oops')
 
+    def installed_fixture(self, directory, archive):
+        root = Path(directory) / 'installed'
+        root.mkdir()
+        with tarfile.open(archive) as package:
+            for member in package:
+                path = root / member.name.removeprefix('package/')
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(package.extractfile(member).read())
+        return root
+
+    def test_install_comparison_detects_same_version_stale_bytes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.archive(tmp, self.package())
+            installed = self.installed_fixture(tmp, path)
+            result = dev.compare_install(path, installed)
+            self.assertTrue(result['all_packaged_files_match'])
+            self.assertEqual(result['checked_files'], 3)
+            self.assertFalse(result['runtime_verified'])
+            # Identical version and byte length must not hide different content.
+            old = (installed / 'index.js').read_bytes()
+            (installed / 'index.js').write_bytes(old.replace(b'apply', b'other'))
+            result = dev.compare_install(path, installed)
+            self.assertFalse(result['ok'])
+            self.assertIn('Installed content mismatch: index.js', result['errors'])
+            self.assertEqual((installed / 'index.js').read_bytes(), old.replace(b'apply', b'other'))
+
+    def test_install_comparison_detects_missing_asset(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.archive(tmp, self.package(), {'assets/book.txt': 'book'})
+            installed = self.installed_fixture(tmp, path)
+            (installed / 'assets/book.txt').unlink()
+            result = dev.compare_install(path, installed)
+            self.assertFalse(result['all_packaged_files_match'])
+            self.assertIn('Missing installed file: assets/book.txt', result['errors'])
+
+    def test_install_comparison_rejects_symlink_outside_package(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.archive(tmp, self.package())
+            installed = self.installed_fixture(tmp, path)
+            outside = Path(tmp) / 'outside.js'
+            outside.write_bytes((installed / 'index.js').read_bytes())
+            (installed / 'index.js').unlink()
+            (installed / 'index.js').symlink_to(outside)
+            result = dev.compare_install(path, installed)
+            self.assertFalse(result['ok'])
+            self.assertTrue(any('symlink: index.js' in error for error in result['errors']))
+
+    def test_bad_archive_rejected_before_inspecting_installation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = self.archive(tmp, self.package(), {'../../outside': 'x'})
+            result = dev.compare_install(path, Path(tmp) / 'does-not-exist')
+            self.assertFalse(result['ok'])
+            self.assertEqual(result['checked_files'], 0)
+
+    def test_compatibility_metadata_preserves_precedence_without_verdict(self):
+        package = self.package()
+        package['peerDependencies'] = {'@deepseek-ai/dsh-tools': '0.2.1-rc.2', '@deepseek-ai/cordis': '~4.0.5'}
+        metadata = dev.compatibility_metadata(package)
+        self.assertEqual(metadata['basis_rc3'], 'dsh peers')
+        self.assertEqual(metadata['dsh_peers'], {'@deepseek-ai/dsh-tools': '0.2.1-rc.2'})
+        package['engines'] = {'dsh': ''}
+        metadata = dev.compatibility_metadata(package)
+        self.assertEqual(metadata['basis_rc3'], 'engines.dsh')
+        self.assertEqual(metadata['engines_dsh'], '')
+        self.assertFalse(metadata['evaluated'])
+
 
 if __name__ == '__main__':
     unittest.main()

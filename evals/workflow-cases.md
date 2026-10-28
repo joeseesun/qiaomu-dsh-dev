@@ -18,3 +18,12 @@
 | 切主题保持radio播放 | owner稳定，状态不丢，停用释放 | remount销毁播放器 |
 | 旧版home含Todo/笔记，重置设置 | 配置重置、内容保留，迁移旧字段 | wipe localStorage |
 | provider成功/失败、审批动作 | UI和工具共用operation；审批user-only | Agent自批、静默跨provider发送隐私 |
+
+## 宿主升级与缓存反例
+
+- main manifest 已支持 rc3，但公开旧 tgz 仍固定旧 peers：应先复现公开包拒装，再验证候选，不能报告 main 正常即用户问题不存在。
+- engines.dsh 接受 rc3、peers 仍写 rc2：按目标官方优先级判断，不将字面不一致直接写成安装故障。
+- matrix 通过，但工具等待缺失服务或调用报错：运行验收应失败，不能发布兼容承诺。
+- 同包名/版本、同文件长度但已安装 JS 内容不同：compare-install 必须失败，不改变安装副本。
+- 纯 UI 产品没有 Agent tool：选择真实 Web/Desktop 用户流程，不能省略 smoke 断言伪造通过。
+- 用户只要求本次适配：完成本次修复和已授权发布，不自动新建持久调度。

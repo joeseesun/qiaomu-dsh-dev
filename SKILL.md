@@ -1,10 +1,10 @@
 ---
 name: qiaomu-dsh-dev
 description: |
-  Develop, scaffold, debug, review, test, install and publish persistent DeepSeek Harness (DSH) Cordis plugins and bundles end to end. Use for Host services/tools, Client slots/panels, Remote bridges, native conversations, plugin data, profile integration, build failures, UI regressions, live-host verification, GitHub releases, illustrated bilingual plugin README, packaged artifacts and marketplace submissions. Includes standalone doctor, scaffold, artifact audit and public-download verification; no other skill installation required. Check the installed Harness version and current API. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, ephemeral Cordis Run packages and skill authoring.
+  Develop, scaffold, debug, review, test, install and publish persistent DeepSeek Harness (DSH) Cordis plugins and bundles end to end. Use for Host services/tools, Client slots/panels, Remote bridges, native conversations, plugin data, profile integration, build failures, host upgrades and compatibility matrices, UI regressions, live-host verification, GitHub releases, illustrated bilingual plugin README, packaged artifacts and marketplace submissions. Includes standalone doctor, scaffold, artifact audit, installed-file comparison and public-download verification; no other skill installation required. Check the installed Harness version and current API. Exclude Obsidian-only plugins, generic web apps, one-off DSH usage questions, ephemeral Cordis Run packages and skill authoring.
 metadata:
   author: 向阳乔木
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # 乔木 DSH 插件开发
@@ -24,9 +24,10 @@ metadata:
 3. 画出最短用户路径：动作 → 入口/slot/工具 → 所需服务与 `inject` → Remote/Host 副作用 → 状态/错误反馈 → 卸载/恢复。明确谁持有数据、谁清理资源、缺服务时如何退化。
 4. 在现有架构内最小修改。新增文案同时进入语言字典；输入、菜单、快捷操作要保留键盘、焦点、草稿与失败恢复。AI 伴读、外部内容和写入按 [数据与界面](references/data-and-ui.md) 验证。
 5. 跑项目已有 lint/typecheck/test/build，再核对构建产物、`exports`、`files`、bundle patch 与 profile 组合。安装/更新到**明确的测试 profile**，重载/重启后走真实用户路径；按 [验证与发布](references/verification.md) 记录每层证据。
-6. 若是故障，先复现并定位哪一层失效，修复后复测原场景和一个邻近场景。按需读 [四个乔木项目案例](references/cases.md)，其中记录的是样本经验而非框架保证。
+6. 宿主升级、版本拒装或跨产品兼容维护时，读 [宿主升级与兼容演进](references/host-compatibility.md)：公开包与候选源码分别检查，按需调用固定版本 health CLI，再验证真实工具与 UI。
+7. 若是故障，先复现并定位哪一层失效，修复后复测原场景和一个邻近场景。按需读 [四个乔木项目案例](references/cases.md)，其中记录的是样本经验而非框架保证。
 
-7. 发布准备、Topics 或市场投稿时，读 [分发与市场提交](references/distribution-and-marketplaces.md)。先证明独立安装，再报告公开发布；目录投稿、审核、可见、安装是不同阶段。
+8. 发布准备、Topics 或市场投稿时，读 [分发与市场提交](references/distribution-and-marketplaces.md)。先证明独立安装，再报告公开发布；目录投稿、审核、可见、安装是不同阶段。
 
 ## 可直接执行的工具与配方
 
@@ -36,6 +37,7 @@ metadata:
 python3 scripts/dsh_dev.py doctor --repo /path/to/plugin --dsh /path/to/dsh
 python3 scripts/dsh_dev.py init /path/to/new-plugin --name qiaomu-demo-dsh
 python3 scripts/dsh_dev.py audit /path/to/package.tgz
+python3 scripts/dsh_dev.py compare-install /path/to/package.tgz --installed /path/to/profile/node_modules/plugin-name
 python3 scripts/dsh_dev.py verify-download --url https://example.com/package.tgz --sha256 EXPECTED_HASH
 python3 -m unittest discover -s tests -v
 ```
@@ -50,6 +52,7 @@ python3 -m unittest discover -s tests -v
 - 客户端构建形式由**当前目标宿主**决定。最近乔木项目使用 `window.__ModuleLoader__.load({ id, factory(require) })` 的 CJS 外壳；必须核实目标版本的加载器及可外部化模块，不能照搬旧清单或把浏览器代码打成裸 ESM。
 - 新插件优先稳定 Slot + 当前主题 token + 自有控件。官方持久化插件指南不建议运行时导入内部 Harness Client 包；已有编译项目先查精确版本兼容，避免未经迁移验证直接删依赖。`dsh.client.inject` 不等于模块导入许可。
 - 停用→重启用→重载配置后不得重复 listener/slot/style/media；Agent context 上的注册还要在插件自身 effect 中持有 disposer。Waterfall 保留未知决策字段并正确委托；不用新自定义 session event 偷存插件状态。
+- 声明矩阵、真实宿主启动、工具调用和用户操作分层验收。`engines.dsh` 与 DSH peers 的优先级以目标宿主为准；不靠豁免或放宽范围替代源码适配。
 - Bundle 是分发层，profile 是运行组合。核对安装副本与源码摘要、配置覆盖顺序、必需依赖和实际启动日志。修改源码不会自动更新 `file:` 安装副本或已加载模块。
 - 只在真实运行面证明用户可见行为：图片、媒体、网络、原生会话、选文、导入导出都要测试成功、失败及状态恢复。自动化冒烟测试是前置证据。
 - 公开发布分别核对 PR、CI、合并、Release/包、全新 profile 安装与实际界面；不得由前一层推断后一层。
